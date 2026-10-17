@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,6 @@
 
     <!-- ========================================================= -->
     <!-- GOOGLE ANALYTICS (FREE PAGE VIEW & CLICK TRACKING)        -->
-    <!-- Replace 'G-YOUR_MEASUREMENT_ID' with your real GA4 ID     -->
     <!-- ========================================================= -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HE8HCR8QHS"></script>
     <script>
@@ -16,7 +14,8 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-HE8HCR8QHS'');
+      // Fixed syntax error here (removed extra quote)
+      gtag('config', 'G-HE8HCR8QHS');
     </script>
     <!-- ========================================================= -->
 
@@ -32,14 +31,19 @@
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #070a12;
+            background-color: #060911;
+            background-image: 
+                radial-gradient(at 15% 15%, rgba(124, 58, 237, 0.08) 0px, transparent 50%),
+                radial-gradient(at 85% 85%, rgba(14, 165, 233, 0.08) 0px, transparent 50%);
             color: #f1f5f9;
         }
 
-        /* Diagonal Corner Cross Accents with 10% Soft Gradient Direction */
+        /* Diagonal Corner Cross Accents */
         .corner-cross-wrapper {
             position: relative;
             overflow: hidden;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
         }
         
         /* Top-Left Corner Cross Accent */
@@ -48,9 +52,9 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(135deg, rgba(139, 92, 246, 0.8) 0%, rgba(124, 58, 237, 0.2) 40%, rgba(124, 58, 237, 0.1) 70%, transparent 100%);
+            width: 130px;
+            height: 130px;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.85) 0%, rgba(124, 58, 237, 0.2) 45%, transparent 100%);
             clip-path: polygon(0 0, 100% 0, 0 100%);
             z-index: 10;
             pointer-events: none;
@@ -62,77 +66,91 @@
             position: absolute;
             bottom: 0;
             right: 0;
-            width: 120px;
-            height: 120px;
-            background: linear-gradient(315deg, rgba(14, 165, 233, 0.8) 0%, rgba(3, 105, 161, 0.2) 40%, rgba(3, 105, 161, 0.1) 70%, transparent 100%);
+            width: 130px;
+            height: 130px;
+            background: linear-gradient(315deg, rgba(14, 165, 233, 0.85) 0%, rgba(3, 105, 161, 0.2) 45%, transparent 100%);
             clip-path: polygon(100% 100%, 0 100%, 100% 0);
             z-index: 10;
             pointer-events: none;
         }
 
-        /* Solid Cards with 10% Internal Directional Gradient */
+        /* Upgraded Cards with Smooth Hover & Glow */
         .card-ch1 {
-            background: linear-gradient(135deg, rgba(124, 58, 237, 0.10) 0%, rgba(10, 15, 29, 0.98) 60%, rgba(10, 15, 29, 1) 100%);
+            background: linear-gradient(135deg, rgba(124, 58, 237, 0.12) 0%, rgba(10, 15, 29, 0.98) 65%, rgba(10, 15, 29, 1) 100%);
             border: 1px solid rgba(139, 92, 246, 0.35);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .card-ch1:hover {
-            border-color: rgba(168, 85, 247, 0.6);
-            transform: translateY(-2px);
+            border-color: rgba(168, 85, 247, 0.75);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -10px rgba(124, 58, 237, 0.25);
         }
 
         .card-ch2 {
-            background: linear-gradient(135deg, rgba(14, 165, 233, 0.10) 0%, rgba(10, 15, 29, 0.98) 60%, rgba(10, 15, 29, 1) 100%);
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.12) 0%, rgba(10, 15, 29, 0.98) 65%, rgba(10, 15, 29, 1) 100%);
             border: 1px solid rgba(14, 165, 233, 0.35);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .card-ch2:hover {
-            border-color: rgba(56, 189, 248, 0.6);
-            transform: translateY(-2px);
+            border-color: rgba(56, 189, 248, 0.75);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px -10px rgba(14, 165, 233, 0.25);
         }
 
         /* Action Buttons */
         .btn-purple {
-            background-color: #6d28d9;
+            background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
             color: #ffffff;
-            transition: all 0.2s ease;
+            transition: all 0.25s ease;
         }
         .btn-purple:hover {
-            background-color: #5b21b6;
-            box-shadow: 0 4px 15px rgba(109, 40, 217, 0.4);
+            background: linear-gradient(135deg, #6d28d9 0%, #5b21b6 100%);
+            box-shadow: 0 6px 20px rgba(124, 58, 237, 0.45);
+            transform: translateY(-1px);
         }
 
         .btn-cyan {
-            background-color: #0369a1;
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
             color: #ffffff;
-            transition: all 0.2s ease;
+            transition: all 0.25s ease;
         }
         .btn-cyan:hover {
-            background-color: #075985;
-            box-shadow: 0 4px 15px rgba(3, 105, 161, 0.4);
+            background: linear-gradient(135deg, #0369a1 0%, #075985 100%);
+            box-shadow: 0 6px 20px rgba(2, 132, 199, 0.45);
+            transform: translateY(-1px);
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between py-8 px-4 sm:px-8">
+<body class="min-h-screen flex flex-col justify-between py-6 px-4 sm:px-8">
 
     <!-- Top Badge Header -->
-    <header class="max-w-5xl mx-auto w-full flex justify-between items-center mb-8">
-        <div class="flex items-center gap-2 bg-slate-900/80 px-3.5 py-1.5 rounded-full border border-slate-800">
+    <header class="max-w-5xl mx-auto w-full flex flex-wrap justify-between items-center gap-3 mb-6">
+        <div class="flex items-center gap-2 bg-slate-900/90 px-3.5 py-1.5 rounded-full border border-slate-800 shadow-sm">
             <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
             <span class="text-xs font-bold tracking-wider uppercase text-slate-300">Verified Telegram Hub</span>
+        </div>
+
+        <div class="flex items-center gap-2 bg-purple-950/60 px-3.5 py-1.5 rounded-full border border-purple-700/50">
+            <i class="fa-solid fa-chart-line text-purple-400 text-xs"></i>
+            <span class="text-xs font-bold tracking-wide text-purple-200">Q2 FY27 Season Live</span>
         </div>
     </header>
 
     <!-- MAIN CONTAINER WITH CORNER CROSS ACCENTS -->
-    <main class="max-w-5xl mx-auto w-full flex-grow">
+    <main class="max-w-5xl mx-auto w-full flex-grow flex items-center">
         
-        <div class="corner-cross-wrapper bg-slate-900 border-2 border-slate-800 rounded-3xl p-6 sm:p-10 shadow-2xl relative">
+        <div class="corner-cross-wrapper border-2 border-slate-800/90 rounded-3xl p-6 sm:p-10 shadow-2xl relative w-full">
             
             <!-- HEADER TITLE -->
             <div class="text-center pt-2 mb-10">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-semibold mb-3">
+                    <span>🇮🇳 Indian Stock Market Intelligence</span>
+                </div>
                 <h1 class="text-3xl sm:text-5xl font-black tracking-tight mb-3 text-white">
                     FINANCIAL <span class="text-purple-400">H</span><span class="text-sky-400">UB</span>
                 </h1>
-                <p class="text-slate-400 text-sm sm:text-base max-w-lg mx-auto font-medium">
-                    Access stock earnings breakdowns, company quarterly reports, and real-time NSE/BSE market alerts.
+                <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto font-medium">
+                    Access stock earnings breakdowns, <span class="text-slate-200 font-semibold">Q2 FY27</span> corporate financial reports, and real-time NSE/BSE market alerts.
                 </p>
             </div>
 
@@ -140,7 +158,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
 
                 <!-- CHANNEL 1: FINANCIAL RESULTS -->
-                <div class="card-ch1 rounded-2xl p-6 flex flex-col justify-between shadow-xl transition-all duration-300">
+                <div class="card-ch1 rounded-2xl p-6 flex flex-col justify-between shadow-xl">
                     <div>
                         <!-- Header & Round Logo Avatar -->
                         <div class="flex items-center gap-4 mb-5 pb-4 border-b border-slate-800/80">
@@ -149,15 +167,20 @@
                                 <img src="1000331671.jpg" alt="Financial Results Profile Logo" 
                                      class="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-purple-500 object-cover bg-slate-950 shadow-md"
                                      onerror="this.onerror=null; this.src='https://api.iconify.design/heroicons:presentation-chart-line-solid.svg?color=%238b5cf6';">
-                                <span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-purple-500 border-2 border-slate-900"></span>
+                                <span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-emerald-400 border-2 border-slate-900" title="Active"></span>
                             </div>
 
-                            <div>
-                                <span class="text-[10px] font-extrabold uppercase tracking-widest text-purple-300 bg-purple-950/80 border border-purple-800/80 px-2.5 py-0.5 rounded-full">
-                                    Channel 1
-                                </span>
-                                <h2 class="text-xl font-bold text-white mt-1">Financial Results</h2>
-                                <p class="text-xs text-purple-400 font-mono font-semibold">t.me/finresult25</p>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <span class="text-[10px] font-extrabold uppercase tracking-widest text-purple-300 bg-purple-950/90 border border-purple-700/80 px-2.5 py-0.5 rounded-full">
+                                        Channel 1
+                                    </span>
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-amber-300 bg-amber-950/80 border border-amber-700/60 px-2 py-0.5 rounded-full">
+                                        Q2 FY27 Updates
+                                    </span>
+                                </div>
+                                <h2 class="text-xl font-bold text-white mt-1.5 truncate">Financial Results</h2>
+                                <p class="text-xs text-purple-400 font-mono font-semibold truncate">@finresult25</p>
                             </div>
                         </div>
 
@@ -168,21 +191,21 @@
                                 Channel Purpose
                             </h3>
                             <p class="text-sm text-slate-300 leading-relaxed mb-4">
-                                Delivers complete corporate quarterly financial results (Q1 FY27 & upcoming quarters), balance sheet performance, and profit/loss summaries for Indian listed companies.
+                                Delivers complete corporate quarterly financial results (<span class="text-purple-300 font-semibold">Q2 FY27 & upcoming quarters</span>), balance sheet performance, and profit/loss summaries for Indian listed companies.
                             </p>
                             
-                            <ul class="space-y-2 text-xs text-slate-300">
-                                <li class="flex items-start gap-2">
+                            <ul class="space-y-2.5 text-xs text-slate-300">
+                                <li class="flex items-start gap-2.5">
                                     <i class="fa-solid fa-circle-check text-purple-400 mt-0.5"></i>
-                                    <span>Quarterly Profit & Loss (P&L) statements</span>
+                                    <span><strong>Q2 FY27</strong> Profit & Loss (P&L) statements & YoY/QoQ comparisons</span>
                                 </li>
-                                <li class="flex items-start gap-2">
+                                <li class="flex items-start gap-2.5">
                                     <i class="fa-solid fa-circle-check text-purple-400 mt-0.5"></i>
-                                    <span>In-depth financial health & revenue analysis</span>
+                                    <span>In-depth financial health, EBITDA margins & revenue analysis</span>
                                 </li>
-                                <li class="flex items-start gap-2">
+                                <li class="flex items-start gap-2.5">
                                     <i class="fa-solid fa-circle-check text-purple-400 mt-0.5"></i>
-                                    <span>Fundamental stock data for long-term investors</span>
+                                    <span>Fundamental stock data curated for long-term investors</span>
                                 </li>
                             </ul>
                         </div>
@@ -194,10 +217,11 @@
                            onclick="trackClick('Channel_1_Visit')"
                            class="btn-purple w-full py-3 px-4 rounded-xl font-bold text-sm text-center flex items-center justify-center gap-2 shadow-md">
                             <i class="fa-brands fa-telegram text-lg"></i>
-                            <span>Visit Channel 1</span>
+                            <span>Join Financial Results</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-80 ml-1"></i>
                         </a>
                         <button onclick="copyToClipboard('https://t.me/finresult25', 'Channel_1_CopyLink')"
-                                class="w-full py-2 px-4 rounded-xl text-xs font-semibold bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700/80 transition flex items-center justify-center gap-2">
+                                class="w-full py-2.5 px-4 rounded-xl text-xs font-semibold bg-slate-900/90 hover:bg-slate-800 text-slate-300 border border-slate-700/80 transition flex items-center justify-center gap-2">
                             <i class="fa-regular fa-copy"></i>
                             <span>Copy Channel 1 Link</span>
                         </button>
@@ -205,7 +229,7 @@
                 </div>
 
                 <!-- CHANNEL 2: STOCK FLASH ALERTS -->
-                <div class="card-ch2 rounded-2xl p-6 flex flex-col justify-between shadow-xl transition-all duration-300">
+                <div class="card-ch2 rounded-2xl p-6 flex flex-col justify-between shadow-xl">
                     <div>
                         <!-- Header & Round Logo Avatar -->
                         <div class="flex items-center gap-4 mb-5 pb-4 border-b border-slate-800/80">
@@ -214,40 +238,45 @@
                                 <img src="1000331629.png" alt="Stock Flash Alerts Profile Logo" 
                                      class="w-16 h-16 sm:w-20 sm:h-20 rounded-full border-2 border-sky-500 object-cover bg-slate-950 shadow-md"
                                      onerror="this.onerror=null; this.src='https://api.iconify.design/heroicons:bell-alert-solid.svg?color=%230284c7';">
-                                <span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-sky-500 border-2 border-slate-900"></span>
+                                <span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-emerald-400 border-2 border-slate-900" title="Active"></span>
                             </div>
 
-                            <div>
-                                <span class="text-[10px] font-extrabold uppercase tracking-widest text-sky-300 bg-sky-950/80 border border-sky-800/80 px-2.5 py-0.5 rounded-full">
-                                    Channel 2
-                                </span>
-                                <h2 class="text-xl font-bold text-white mt-1">Stock Flash Alerts</h2>
-                                <p class="text-xs text-sky-400 font-mono font-semibold">t.me/stockflashalerts</p>
+                            <div class="flex-1 min-w-0">
+                                <div class="flex items-center gap-2 flex-wrap">
+                                    <span class="text-[10px] font-extrabold uppercase tracking-widest text-sky-300 bg-sky-950/90 border border-sky-700/80 px-2.5 py-0.5 rounded-full">
+                                        Channel 2
+                                    </span>
+                                    <span class="text-[10px] font-bold uppercase tracking-wider text-emerald-300 bg-emerald-950/80 border border-emerald-700/60 px-2 py-0.5 rounded-full">
+                                        Fast Alerts
+                                    </span>
+                                </div>
+                                <h2 class="text-xl font-bold text-white mt-1.5 truncate">Stock Flash Alerts</h2>
+                                <p class="text-xs text-sky-400 font-mono font-semibold truncate">@stockflashalerts</p>
                             </div>
                         </div>
 
                         <!-- Dedicated Purpose 2 -->
                         <div class="mb-6">
                             <h3 class="text-xs font-extrabold uppercase tracking-wider text-slate-400 mb-2.5 flex items-center gap-1.5">
-                                <i class="fa-solid fa-bullseye text-sky-400"></i>
+                                <i class="fa-solid fa-bolt text-sky-400"></i>
                                 Channel Purpose
                             </h3>
                             <p class="text-sm text-slate-300 leading-relaxed mb-4">
-                                Sends high-speed notifications for NSE and BSE stock price movements, breaking corporate developments, dividend announcements, and urgent market news.
+                                Sends high-speed notifications for NSE and BSE stock price movements, breaking corporate developments, order wins, dividend announcements, and urgent market news.
                             </p>
 
-                            <ul class="space-y-2 text-xs text-slate-300">
-                                <li class="flex items-start gap-2">
+                            <ul class="space-y-2.5 text-xs text-slate-300">
+                                <li class="flex items-start gap-2.5">
                                     <i class="fa-solid fa-circle-check text-sky-400 mt-0.5"></i>
-                                    <span>Real-time NSE & BSE stock movement alerts</span>
+                                    <span>Real-time NSE & BSE stock price movement & breakout alerts</span>
                                 </li>
-                                <li class="flex items-start gap-2">
+                                <li class="flex items-start gap-2.5">
                                     <i class="fa-solid fa-circle-check text-sky-400 mt-0.5"></i>
-                                    <span>Urgent corporate actions, stock splits & dividends</span>
+                                    <span>Urgent corporate actions, bonus issues, stock splits & dividends</span>
                                 </li>
-                                <li class="flex items-start gap-2">
+                                <li class="flex items-start gap-2.5">
                                     <i class="fa-solid fa-circle-check text-sky-400 mt-0.5"></i>
-                                    <span>High-speed market alerts designed for active traders</span>
+                                    <span>High-speed market updates designed for active traders</span>
                                 </li>
                             </ul>
                         </div>
@@ -259,10 +288,11 @@
                            onclick="trackClick('Channel_2_Subscribe')"
                            class="btn-cyan w-full py-3 px-4 rounded-xl font-bold text-sm text-center flex items-center justify-center gap-2 shadow-md">
                             <i class="fa-brands fa-telegram text-lg"></i>
-                            <span>Subscribe Channel 2</span>
+                            <span>Join Stock Flash Alerts</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-80 ml-1"></i>
                         </a>
                         <button onclick="copyToClipboard('https://t.me/stockflashalerts', 'Channel_2_CopyLink')"
-                                class="w-full py-2 px-4 rounded-xl text-xs font-semibold bg-slate-900 hover:bg-slate-800 text-slate-300 border border-slate-700/80 transition flex items-center justify-center gap-2">
+                                class="w-full py-2.5 px-4 rounded-xl text-xs font-semibold bg-slate-900/90 hover:bg-slate-800 text-slate-300 border border-slate-700/80 transition flex items-center justify-center gap-2">
                             <i class="fa-regular fa-copy"></i>
                             <span>Copy Channel 2 Link</span>
                         </button>
@@ -272,9 +302,9 @@
             </div>
 
             <!-- FOOTER NOTICE INSIDE CONTAINER -->
-            <div class="text-center pt-4 border-t border-slate-800/80">
-                <p class="text-xs text-slate-400">
-                    Subscribe to <span class="text-purple-400 font-bold">Channel 1</span> for detailed financial reports and <span class="text-sky-400 font-bold">Channel 2</span> for fast market alerts.
+            <div class="text-center pt-5 border-t border-slate-800/80">
+                <p class="text-xs sm:text-sm text-slate-400">
+                    Subscribe to <span class="text-purple-400 font-bold">Financial Results</span> for Q2 FY27 earnings reports and <span class="text-sky-400 font-bold">Stock Flash Alerts</span> for instant market news.
                 </p>
             </div>
 
@@ -288,9 +318,9 @@
     </footer>
 
     <!-- TOAST NOTIFICATION -->
-    <div id="toast" class="fixed bottom-6 right-6 bg-slate-800 text-white border border-slate-700 text-xs px-4 py-3 rounded-xl shadow-2xl transition-all duration-300 opacity-0 transform translate-y-4 pointer-events-none flex items-center gap-2">
+    <div id="toast" class="fixed bottom-6 right-6 bg-slate-900 text-white border border-slate-700 text-xs px-4 py-3 rounded-xl shadow-2xl transition-all duration-300 opacity-0 transform translate-y-4 pointer-events-none flex items-center gap-2.5 z-50">
         <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
-        <span id="toastMsg">Link copied to clipboard!</span>
+        <span id="toastMsg" class="font-medium">Link copied to clipboard!</span>
     </div>
 
     <!-- SCRIPT FOR CLIPBOARD COPY & EVENT TRACKING -->
@@ -310,12 +340,16 @@
         function copyToClipboard(url, trackingTag) {
             trackClick(trackingTag);
 
-            const tempInput = document.createElement("input");
-            tempInput.value = url;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempInput);
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(url);
+            } else {
+                const tempInput = document.createElement("input");
+                tempInput.value = url;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand("copy");
+                document.body.removeChild(tempInput);
+            }
 
             const toast = document.getElementById("toast");
             const toastMsg = document.getElementById("toastMsg");
@@ -327,7 +361,7 @@
             setTimeout(() => {
                 toast.classList.remove("opacity-100", "translate-y-0");
                 toast.classList.add("opacity-0", "translate-y-4", "pointer-events-none");
-            }, 2000);
+            }, 2500);
         }
     </script>
 </body>
